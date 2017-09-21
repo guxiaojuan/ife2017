@@ -1,0 +1,29 @@
+{
+  "name": "ife2017",
+  "version": "1.0.0",
+  "description": "百度IFE2017",
+  "main": "index.js",
+  "scripts": {
+    "build":"webpack --config webpack.config.js",
+    "devbuild":"webpack --progress --watch"      //代码改动后自动编译
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guxiaojuan/ife2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guxiaojuan/ife2017/issues"
+  },
+  "homepage": "https://github.com/guxiaojuan/ife2017#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
