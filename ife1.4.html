@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平垂直居中</title>
+
+    <style>
+        .main{
+            width:400px;
+            height:240px;
+            position: absolute;
+            background: #ccc;
+            top:50%;
+            left:50%;
+            margin-left:-200px;
+            margin-top:-120px;
+        }
+        .box{
+            background-color: yellow;
+            width:50px;
+            height:50px;
+        }
+        .box:first-child{
+            border-radius:0 0 50px 0;
+        }
+        .box:last-child{
+            position: relative;
+            left:350px;
+            top:3px;
+            border-radius:50px 0 0 0;
+
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="box"></div>
+    <div>
+        <p>我们知道左右外边距的auto可以让元素水平居中，但是上下不可以。一是因为auto的作用是自动分配<span>剩余空间</span>，但是
+            块状元素在垂直方向上默认是不会填充父元素的height的，二是正常文档流中一个元素上下外边距设置为auto时，他会自动变为0
+        </p>
+    </div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>

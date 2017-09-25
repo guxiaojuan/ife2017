@@ -6,16 +6,17 @@ const path = require('path')
 const ExtectTextPlugin = require('extract-text-webpack-plugin')  //将样式文件独立出来
 
 module.exports={
+    devtool:'source-map',
     entry:{
         index:"index.js"
     },
     output:{
-        path: path.resolve(__dirname,'bulid'),
-        filename: '[name].bundle.js' ,
-        publicPath: './build/'
+        path: path.resolve(__dirname,'bulid'),    //webpack的输出路径
+        filename: '[name].[chunkhash].js' ,   //编译后的文件名
+        publicPath: './assets/'      //输出解析文件的目录
     },
     module:{
-        loaders:[
+        rules:[
             {
                 test:/\.css$/,
                 loader:ExtectTextPlugin.extract("style-loader","css-loader")
@@ -29,7 +30,7 @@ module.exports={
     },
     plugins:[
         new webpack.optimize.UglifyJsPlugin(),
-        new webpack.optimize.CommonsChunkPlugin('common.js'),
+        new webpack.optimize.CommonsChunkPlugin('common.js'),  //公共引用的模块独立出来做成一个common.js
         new ExtectTextPlugin("[name].css")
     ]
 }

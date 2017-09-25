@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏式布局 — 圣杯布局</title>
+
+    <style>
+        .main{
+            background-color: #eee;
+            border:1px solid #999;
+            padding:0 185px 20px 265px;
+            overflow: hidden;
+        }
+
+        .middle{
+            float: left;
+            position: relative;
+            width:100%;
+            background-color: white;
+            border:1px solid blue;
+            word-break: break-all;
+        }
+        .left{
+            float: left;
+            position: relative;
+            margin-left:-100%;
+            width:200px;
+            left:-255px;
+            padding:20px;
+            background-color: white;
+            border:1px solid red;
+        }
+   
+        .right{
+            float: left;
+            position:relative;
+            margin-left:-165px;
+            padding: 20px;
+            width:120px;
+            right:-175px;
+            background-color: white;
+            border:1px solid yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="middle">
+        <h3>中间弹性区</h3>
+        <p>圣杯布局，将middle放在最前边，然后三部分都设置为相对定位relative</p>
+        <p>middle部分width:100%占满</p>
+        <p>middle占满了，此时要把left拉到最左边，就是margin-left:-100%</p>
+        <p>left拉回来了，但是会覆盖middle，此时就要给main，也就是最外层设置padding</p>
+        <p>middle内容拉回来了，但是left也跟着过来了，所以再对left设置相对定位 left:-200px</p>
+        <p>让右边的盒子上去，设置负的左边距为自身宽度</p>
+    </div>
+    <div class="left">
+        <h3>左边栏</h3>
+        <span>团队名称</span>
+        <div>logo</div>
+    </div>
+
+    <div class="right">
+        <h3>右边栏</h3>
+        个人logo
+    </div>
+</div>
+</body>
+</html>
