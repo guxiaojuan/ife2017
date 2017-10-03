@@ -4,8 +4,7 @@
   "description": "百度IFE2017",
   "main": "index.js",
   "scripts": {
-    "build":"webpack --config webpack.config.js",
-    "devbuild":"webpack --progress --watch"      //代码改动后自动编译
+    "build":"webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
