@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>flex布局</title>
-    <style media="screen">
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=0">
+    <style>
         .main{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
         .box{
             width:150px;
             border:1px solid red;
             padding:20px;
+            margin-bottom:40px;
         }
         .box1{
             height:120px;
@@ -27,23 +31,17 @@
             height:200px;
             border-color:blue;
         }
-        @media all and(max-width: 460px) {
+        @media all and (max-width: 640px) {
             .main{
                 align-items: flex-start;
-                flex-wrap: wrap;
+                /*flex-wrap: wrap;*/
             }
-            .box4{
+            /*flex中默认order是0*/
+            .box1,.box2,.box3{
                 order:1;
+                /*background-color:green;*/
             }
-            /*.box1{*/
-                /*order:2;*/
-            /*}*/
-            /*.box2{*/
-                /*order:3;*/
-            /*}*/
-            /*.box3{*/
-                /*order:4;*/
-            /*}*/
+
         }
     </style>
 </head>
