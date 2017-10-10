@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏式布局 — 双飞翼布局</title>
+
+    <style>
+        .middle{
+            float: left;
+            background-color: #eee;
+            border:1px solid #999;
+            padding:0 185px 20px 265px;
+            /*overflow: hidden;*/
+        }
+
+        .middle-inner{
+            /*float: left;*/
+            width:100%;
+            background-color: white;
+            border:1px solid blue;
+            word-break: break-all;
+        }
+        .left{
+            float: left;
+            /*position: relative;*/
+            margin-left:-100%;
+            width:200px;
+            /*left:-255px;*/
+            padding:20px;
+            background-color: white;
+            border:1px solid red;
+        }
+
+        .right{
+            float: left;
+            /*position:relative;*/
+            margin-left:-175px;
+            padding: 20px;
+            width:120px;
+            /*right:-175px;*/
+            background-color: white;
+            border:1px solid yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="middle">
+        <div class="middle-inner">
+            <h3>中间弹性区</h3>
+            <p>双飞翼布局，将middle放在最前边，无最外层的包含父元素。将middle,left,right都设置为float:left</p>
+            <p>middle部分width:100%占满，接下来可以直接使用圣杯布局的方式</p>
+            <p>middle占满了，此时要把left拉到最左边，就是margin-left:-100%</p>
+            <p>left拉回来了，但是会覆盖middle，此时就要给main，也就是最外层设置padding，当然，也可以设置margin</p>
+            <p>middle内容拉回来了，但是left也跟着过来了，所以再对left设置相对定位 left:-200px</p>
+            <p>让右边的盒子上去，设置负的左边距为自身宽度</p>
+            <p>如果不想使用圣杯布局的那种直接操作middle的方法，那么也可以跟圣杯布局不同，给middle增加一个内层div，middle-inner，然后设置margin</p>
+        </div>
+    </div>
+    <div class="left">
+        <h3>左边栏</h3>
+        <span>团队名称</span>
+        <div>logo</div>
+    </div>
+
+    <div class="right">
+        <h3>右边栏</h3>
+        个人logo
+    </div>
+</div>
+</body>
+</html>
