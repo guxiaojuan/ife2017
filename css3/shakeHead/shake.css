@@ -1,0 +1,94 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: table;
+    text-align: center;
+}
+.wrapper{
+    /*margin-top: 100px;*/
+    position: relative;
+}
+.border-cicle{
+    width: 399px;
+    height: 399px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #FCB040;
+    border-radius: 100%;
+    transform: translate(-50%,0);
+    transform: scale(0);
+}
+.background-cicle{
+    width: 400px;
+    height: 400px;
+    background: #95B3BF;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 0 auto;
+    mask-image: radial-gradient(#BADA55, #BADA55);
+    animation: grow 0.7s 1 ease;
+}
+#border-one{
+    animation:border-pulse 1s 3.1s 1 ease;
+    animation-fill-mode: forwards;
+}
+#border-two{
+    animation: border-pulse 1s 3.3s 1 ease;
+    animation-fill-mode: forwards;
+}
+.triangle-light{
+    width: 400px;
+    height: 600px;
+    background: #FFFFFF;
+    opacity: 0.2;
+    position: absolute;
+    animation:triangle-light-anim 1s 2.8s 1 ease;
+    animation-fill-mode: forwards;
+    right:-75%;
+    /*transform:translate(200px,0);*/
+}
+.body{
+    width: 285px;
+    height: 600px;
+    margin: 0 auto;
+    background: #222;
+    border-radius:100px;
+    position:relative;
+    top:200px;
+    animation: body-enter 0.7s 0.2s 1 ease;
+    animation-fill-mode: forwards;
+}
+.shirt-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    top: -300px;
+    font-size: 50px;
+    -webkit-text-stroke: 2px; /*text-stroke设置文字描边宽度和颜色*/
+    /*display: inline-block;*/
+}
+.shirt-text:nth-of-type(1){
+    animation: text-anim 0.7s 3s 1 ease;
+    -webkit-animation: text-anim 0.7s 3s 1 ease;
+}
+.shirt-text:nth-of-type(2){
+    color: #EF4136;
+    animation: text-anim 0.7s 3.1s 1 ease;
+    -webkit-animation: text-anim 0.7s 3.1s 1 ease;
+}
+.shirt-text:nth-of-type(3){
+    animation: text-anim 0.7s 3.2s 1 ease;
+    -webkit-animation: text-anim 0.7s 3.2s 1 ease;
+}
+.shirt-text:nth-of-type(4){
+    animation: text-anim 0.7s 3.3s 1 ease;
+    -webkit-animation: text-anim 0.7s 3.3s 1 ease;
+}
+.shirt-text:nth-of-type(5){
+    animation: text-anim 0.7s 3.4s 1 ease;
+    -webkit-animation: text-anim 0.7s 3.4s 1 ease;
+}
