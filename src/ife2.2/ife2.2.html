@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <link rel="stylesheet" href="ife2.2.css" type="text/css">
+</head>
+<body>
+<div class="form">
+    <div class="validate">
+        <span>名称</span><input type="text" id="name" onfocus="nameF()" onblur="nameB()">
+    </div>
+
+    <div class="validate">
+        <span>密码</span><input type="password" id="pass" onfocus="passF()" onblur="passB()">
+    </div>
+
+    <div class="validate">
+        <span>确认密码</span><input type="password" id="confirm" onblur="confirmB()" onfocus="confirmF()">
+    </div>
+
+    <div class="validate">
+        <span>邮箱</span><input type="email" id="email" onfocus="emailF()" onblur="emailB()">
+    </div>
+
+    <div class="validate">
+        <span>手机</span><input type="text" id="phone" onfocus="phoneF()" onblur="phoneB()">
+    </div>
+
+    <button>提交</button>
+</div>
+
+<script type="text/javascript" src="ife2.2.js"></script>
+</body>
+</html>

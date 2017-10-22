@@ -8,12 +8,12 @@ const ExtectTextPlugin = require('extract-text-webpack-plugin')  //将样式文�
 module.exports={
     devtool:'source-map',
     entry:{
-        index:"index.js"
+        index:"./index.js"
     },
     output:{
-        path: path.resolve(__dirname,'bulid'),    //webpack的输出路径
+        path: path.resolve(__dirname,'dist'),    //webpack的输出路径
         filename: '[name].[chunkhash].js' ,   //编译后的文件名
-        publicPath: './assets/'      //输出解析文件的目录
+        // publicPath: './assets/'      //输出解析文件的目录
     },
     module:{
         rules:[
