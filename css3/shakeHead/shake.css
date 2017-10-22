@@ -92,3 +92,119 @@ body,html{
     animation: text-anim 0.7s 3.4s 1 ease;
     -webkit-animation: text-anim 0.7s 3.4s 1 ease;
 }
+.triangle-dark{
+    width: 400px;
+    height: 600px;
+    background: #000000;
+    opacity: 0.2;
+    position: absolute;
+    left: -60%;
+    top:30%;
+    animation: triangle-dark-anim 1s 3s 1 ease;
+    animation-fill-mode: forwards;
+    transform: translate(-200px, 0)
+}
+.head{
+    width: 196px;
+    height: 260px;
+    border-radius: 50px;
+    background: #FFE4BE;
+    top: 50%;
+    left: 50%;
+    margin-top: -210px;
+    margin-left: -98px;
+    animation: grow 0.7s 0.4s 1 ease, music-move 1s 3.3s infinite alternate ease-in-out;
+    transform-origin: bottom;
+}
+.ear{
+    height: 35px;
+    background: #FFE4BE;
+    border-radius: 12px;
+    position: absolute;
+    top: 116px;
+    animation:grow 0.7s 1.3s 1 ease;
+    animation-fill-mode: forwards;
+}
+#left-ear{
+    left: -12px;
+}
+#right-ear{
+    right:-12px;
+}
+.hair-main{
+    width: 220px;
+    height: 0px;
+    background: #E7AB57;
+    border-radius: 54px 54px 0 0;
+    margin-left: -12px;
+    margin-top: -10px;
+    animation:hair-anim 0.7s 0.9s 1 ease;
+    animation-fill-mode: forwards;
+}
+.sideburn{
+    width: 8px;
+    height: 25px;
+    background: #E7AB57;
+    position: absolute;
+    bottom:-25px;
+    opacity: 0;
+    animation: sideburn-anim 0.7s 0.9s 1 ease;
+    animation-fill-mode: forwards;
+}
+#left-hair{
+    left:12px;
+}
+#right-hair{
+    right:12px;
+}
+.hair-top{
+    width: 128px;
+    height: 70px;
+    opacity: 0;
+    border-top-right-radius: 30px;
+    background: #E7AB57;
+    position: relative;
+    top: -17px;
+    left: 50%;
+    /*transform: translateX(-64px);*/
+    transform-origin: right;
+    animation: hair-top-anim 0.7s 1s 1 ease;
+    animation-fill-mode: forwards;
+}
+.face{
+    width: 180px;
+    height: 0px;
+    border-radius: 48px 48px 0 0;
+    background: #FFE4BE;
+    position: absolute;
+    top: 40px;
+    left: 8px;
+    nimation:hair-anim 0.1s 0.8s 1 linear;
+    animation-fill-mode: forwards;
+}
+.hair-bottom{
+    width: 54px;
+    height: 50px;
+    opacity: 0;
+    border-bottom-left-radius: 25px;
+    background: #E7AB57;
+    position: relative;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-27px);
+    animation:hair-bottom-anim 0.7s 1.4s 1 ease;
+    animation-fill-mode: forwards;
+}
+.nose{
+    width: 20px;
+    height: 45px;
+    opacity: 0;
+    background: #FFE4BE;
+    border-top-left-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    margin-left: -20px;
+    animation: shadow-anim 0.7s 3s 1 ease;
+    animation-fill-mode: forwards;
+}
