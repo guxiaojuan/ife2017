@@ -3,4 +3,4 @@ node_modules
 npm-debug.log
 dist
 vim.exe.stackdump
-
+yarn.lock
