@@ -21,7 +21,8 @@
  1. 给父元素设置高度，父元素具有高度了，就解决了父元素无法自动获取height的问题
  2. 新增加一个div   .clearfix{height:0; clear:both;}
  3. 新增伪类, 原理和2类似 
-        .clearfix{
+ ````
+        .clearfix{   
             zoom:1; /*兼容IE*/
         }
         .clearfix::after{
@@ -30,7 +31,8 @@
             height:0;
             clear:both;
             visibility:hidde;
-        }
+        }     
+ ````
  4. 设置overflow属性，不能为visible,变成一个BFC (hidden 或者 auto) 
     
     
