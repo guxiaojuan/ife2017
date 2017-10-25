@@ -15,8 +15,23 @@
 
 # flex布局中利用align-items:center 设置垂直居中时，必须得知道父元素的height
 
-# 行内元素设置padding时，行内元素自身会
-    
+# 行内元素设置padding和margin时，设置border时可以看到行内元素自身会起作用，但是元素堆叠时，padding-top/margin-top和padding-bottom/margin-bottom不起作用
+
+## 清除浮动的4种方法 ##
+ # 1. 给父元素设置高度，父元素具有高度了，就解决了父元素无法自动获取height的问题
+ # 2. 新增加一个div   .clearfix{height:0; clear:both;}
+ # 3. 新增伪类, 原理和2类似 
+        .clearfix{
+            zoom:1;   /*兼容IE*/
+        }
+        .clearfix::after{
+            content:'';
+            display:block;
+            height:0;
+            clear:both;
+            visibility:hidde;
+        }
+  # 4. 设置overflow属性，不能为visible,变成一个BFC (hidden 或者 auto) 
     
     
     
