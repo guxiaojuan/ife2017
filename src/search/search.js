@@ -4,3 +4,7 @@
 
 function autoComplete(text) {
 }
+
+window.onload = function () {
+    
+}

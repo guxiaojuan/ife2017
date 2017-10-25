@@ -1,0 +1,457 @@
+body {
+    background-color: #d4e7ba;
+}
+
+.ele-wrapper{
+    width:200px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    animation: ele-movement 1s infinite linear;
+}
+.ele-tail{
+    width: 64px;
+    border-top: 7px solid #808080;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate3d(-3%, 69%, 0) rotateZ(-20deg);
+    animation: tail-movement 1s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93);
+}
+.ele-tail:before {
+    border-top: 5px solid #C2C2C2;
+    border-radius: 50%;
+    content: '';
+    height: 50px;
+    position: absolute;
+    width: 64px;
+    top: -6px;
+}
+.ele-body{
+    width: 100%;
+    height:165px;
+    border: 1px solid #808080;
+    position: relative;
+    border-radius: 100px 50px 70px 60px;
+    background: linear-gradient(to bottom, #cfcfcf 0%, #9c9c9c 70%);
+    animation: body-movement 1s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93);
+}
+.ele-head{
+    width:155px;
+    background: #C2C2C2;
+    border-radius: 50%;
+    border-top: 1px solid #808080;
+    box-shadow: -1px 1px 2px #808080;
+    height: 150px;
+    position: absolute;
+    transform: translate3d(80%, -25%, 0);
+    animation: head-movement 2s infinite linear;
+}
+.ele-eyebrows{
+    background: linear-gradient(to top, #C2C2C2 20%, #9c9c9c 100%);
+    border-radius: 10px;
+    border-top: 1px solid #808080;
+    bottom: 88px;
+    height: 20px;
+    left: 92px;
+    position: absolute;
+    width: 60px;
+    animation: eyebrows-movement 1s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93);
+}
+.ele-eyes {
+    left: 60%;
+    position: absolute;
+    top: 6%;
+}
+.ele-eyes::before {
+    left: 41px;
+}
+.ele-eyes::after {
+    left: 10px;
+}
+.ele-eyes::after,.ele-eyes::before{
+    position: absolute;
+    content:'';
+    background-color: #FDFDFD;
+    width:10px;
+    height:10px;
+    bottom:-48px;
+    border-radius:50%;
+    animation: eyes-blink 3.5s infinite linear;
+}
+.ele-mouth{
+    background: linear-gradient(to bottom, #C2C2C2 50%, darkgray 100%);
+    border-radius: 0px 100% 0px 0px;
+    border-top: 2px solid #808080;
+    height: 160px;
+    left: 83%;
+    position: absolute;
+    top: 35%;
+    width: 30px;
+    animation: mouth-movement 1s infinite linear;
+}
+.ele-mouth::before{   /*会跟随所绑定的动画*/
+    background-color: darkgray;
+    border-bottom: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-radius: 8px;
+    bottom: 0;
+    content: '';
+    height: 15px;
+    left: -5px;
+    position: absolute;
+    width: 40px;
+}
+.ele-fang-front, .ele-fang-back{
+    border-bottom: 12px solid #FFF;
+    border-radius: 50%;
+    height: 40px;
+    width:50px;
+    position: absolute;
+    transform:rotateZ(20deg);
+}
+.ele-fang-front{
+    box-shadow: 0px 1px 0px #808080;
+    left: 100px;
+    top: 100px;
+}
+.ele-fang-front:before {
+    background-color: #C2C2C2;
+    bottom: -10px;
+    content: '';
+    height: 45px;
+    left: -5px;
+    position: absolute;
+    width: 15px;
+}
+.ele-fang-front:after {
+    background-color: #C2C2C2;
+    border-radius: 0 50% 50% 0;
+    bottom: -14px;
+    box-shadow: 1px 1px 0px #808080;
+    content: '';
+    height: 21px;
+    left: 6px;
+    position: absolute;
+    transform: rotateZ(20deg);
+    width: 15px;
+}
+.ele-fang-back{
+    border-bottom-color: #e6e6e6;
+    left: 115px;
+    top: 95px;
+    z-index: -1;
+}
+.ele-fang-back:before {
+    background-color: #C2C2C2;
+    bottom: -10px;
+    content: '';
+    height: 25px;
+    position: absolute;
+    width: 30px;
+}
+.ele-ear{
+    background: linear-gradient(to left, #C2C2C2 10%, darkgray 100%);
+    border-bottom: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-top: 1px solid #808080;
+    border-radius: 60px 0 0 50%;
+    height: 110px;
+    width: 60px;
+    left: -22px;
+    position: absolute;
+    top: 25px;
+    transform: rotateZ(-10deg);
+    animation: ear-movement 1s infinite linear;
+}
+div[class^="ele-leg-"] {
+    border-left: 1px solid #808080;
+    height: 88px;
+    position: absolute;
+    width: 50px;
+}
+div[class^="ele-leg-"]::before{
+    position: absolute;
+    background-color: rgba(74, 74, 74, 0.53);
+    content: '';
+    box-shadow: 0 0 2px rgba(74, 74, 74, 0.53);
+    height:10px;
+    width: 50px;
+    border-radius:50%;
+    left:50%;
+    bottom:-30px;
+    transform: translateX(-50%) rotateZ(0deg);
+}
+.ele-leg-front {
+    background-color: #9c9c9c;
+    top: 100%;
+    z-index: 1;
+}
+.ele-leg-back{
+    background-color: #828282;
+}
+.ele-leg-front .ele-foot {
+    background-color: #9c9c9c;
+}
+.ele-leg-back .ele-foot {
+    background-color: #828282;
+}
+.ele-leg-back .ele-foot:before, .ele-leg-back .ele-foot:after {
+    background-color: #bababa;
+}
+.ele-leg-1{
+    animation: leg-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) 0s;
+    right: 57.5%;
+}
+.ele-leg-1:before {
+    animation: foot-shadow-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) 0s;
+}
+.ele-leg-1 .ele-foot {
+    animation: foot-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) 0s;
+}
+
+.ele-leg-2 {
+    animation: leg-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) -1s;
+    right: 67.5%;
+}
+.ele-leg-2:before {
+    animation: foot-shadow-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) -1s;
+}
+.ele-leg-2 .ele-foot {
+    animation: foot-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) -1s;
+}
+
+.ele-leg-3 {
+    animation: leg-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) -1s;
+    right: 5%;
+}
+
+.ele-leg-3:before {
+    animation: foot-shadow-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) -1s;
+}
+.ele-leg-3 .ele-foot {
+    animation: foot-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) -1s;
+}
+
+.ele-leg-4 {
+    animation: leg-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) 0s;
+    right: 15%;
+}
+.ele-leg-4:before {
+    animation: foot-shadow-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) 0s;
+}
+.ele-leg-4 .ele-foot {
+    animation: foot-animation 2s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93) 0s;
+}
+
+.ele-foot:before, .ele-foot:after {
+    background-color: #E0E0E0;
+    border-radius: 10px 10px 0 0;
+    bottom: 0;
+    content: '';
+    height: 15px;
+    position: absolute;
+    width: 11px;
+}
+.ele-foot{
+    width: 55px;
+    height: 35px;
+    position: absolute;
+    box-shadow: -1px 1px 0px #808080;
+    border-radius: 25px 25px 35% 40%;
+    bottom: -17.5px;
+    overflow: hidden;
+}
+.ele-foot:before {
+    right: -7.5px;
+}
+.ele-foot:after {
+    bottom: -3px;
+    right: 5px;
+}
+@keyframes leg-animation {
+    0% {
+        height: 65px;
+        -webkit-transform: translate3d(0, -90%, 0) rotate3d(0, 0, 1, 10deg) translate3d(0, 30%, 0);
+        transform: translate3d(0, -90%, 0) rotate3d(0, 0, 1, 10deg) translate3d(0, 30%, 0);
+    }
+    25% {
+        height: 40px;
+    }
+    50% {
+        height: 65px;
+        -webkit-transform: translate3d(0, -90%, 0) rotate3d(0, 0, 1, -15deg) translate3d(0, 30%, 0);
+        transform: translate3d(0, -90%, 0) rotate3d(0, 0, 1, -15deg) translate3d(0, 30%, 0);
+    }
+    75% {
+        height: 65px;
+    }
+    100% {
+        height: 65px;
+        transform: translate3d(0, -90%, 0) rotate3d(0, 0, 1, 10deg) translate3d(0, 30%, 0);
+    }
+}
+@keyframes foot-animation {
+    0% {
+        transform: translateX(-49%) rotateZ(-10deg);
+    }
+    15% {
+        transform: translateX(-49%) rotateZ(5deg);
+    }
+    40% {
+        transform: translateX(-49%) rotateZ(0deg);
+    }
+    50% {
+        transform: translateX(-49%) rotateZ(15deg);
+    }
+    100% {
+        transform: translateX(-49%) rotateZ(-10deg);
+    }
+}
+@keyframes foot-shadow-animation {
+    0% {
+        transform: translateX(-50%) rotateZ(-8deg);
+        bottom: -20px;
+        width: 50px;
+    }
+    25% {
+        bottom: -30px;
+        width: 40px;
+    }
+    50% {
+        transform: translateX(-50%) rotateZ(13deg);
+        bottom: -20px;
+        width: 50px;
+    }
+    100% {
+        transform: translateX(-50%) rotateZ(-8deg);
+        bottom: -20px;
+        width: 50px;
+    }
+}
+@keyframes eyes-blink {
+    0% {
+        height: 10px;
+    }
+    3% {
+        height: 1px;
+    }
+    5% {
+        height: 10px;
+    }
+    100% {
+        height: 10px;
+    }
+}
+@keyframes ele-movement {
+    0% {
+        -webkit-transform: translate3D(-50%, -54%, 0);
+        transform: translate3D(-50%, -54%, 0);
+    }
+    50% {
+        -webkit-transform: translate3D(-50%, -57%, 0);
+        transform: translate3D(-50%, -57%, 0);
+    }
+    100% {
+        -webkit-transform: translate3D(-50%, -54%, 0);
+        transform: translate3D(-50%, -54%, 0);
+    }
+}
+@keyframes mouth-movement {
+    0% {
+        height: 160px;
+        width: 28px;
+    }
+    50% {
+        height: 150px;
+        width: 30px;
+    }
+    100% {
+        height: 160px;
+        width: 28px;
+    }
+}
+@keyframes mouth-after-movement {
+    0% {
+        width: 37px;
+    }
+    50% {
+        width: 40px;
+    }
+    100% {
+        width: 37px;
+    }
+}
+@keyframes tail-movement {
+    0% {
+        -webkit-transform: translate3d(-3%, 69%, 0) rotateZ(-20deg);
+        transform: translate3d(-3%, 69%, 0) rotateZ(-20deg);
+    }
+    50% {
+        -webkit-transform: translate3d(-5%, 65%, 0) rotateZ(-18deg);
+        transform: translate3d(-5%, 65%, 0) rotateZ(-18deg);
+    }
+    100% {
+        -webkit-transform: translate3d(-3%, 69%, 0) rotateZ(-20deg);
+        transform: translate3d(-3%, 69%, 0) rotateZ(-20deg);
+    }
+}
+@keyframes head-movement {
+    0% {
+        -webkit-transform: translate3d(80%, -22%, 0) rotateZ(3deg);
+        transform: translate3d(80%, -22%, 0) rotateZ(3deg);
+    }
+    25% {
+        -webkit-transform: translate3d(80%, -22.5%, 0) rotateZ(0deg);
+        transform: translate3d(80%, -22.5%, 0) rotateZ(0deg);
+    }
+    50% {
+        -webkit-transform: translate3d(80%, -23%, 0) rotateZ(-3deg);
+        transform: translate3d(80%, -23%, 0) rotateZ(-3deg);
+    }
+    75% {
+        -webkit-transform: translate3d(80%, -22.5%, 0) rotateZ(0deg);
+        transform: translate3d(80%, -22.5%, 0) rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: translate3d(80%, -22%, 0) rotateZ(3deg);
+        transform: translate3d(80%, -22%, 0) rotateZ(3deg);
+    }
+}
+@keyframes body-movement {
+    0% {
+        height: 160px;
+        margin-top: 5px;
+    }
+    50% {
+        height: 162.5px;
+        margin-top: 2.5px;
+    }
+    100% {
+        height: 160px;
+        margin-top: 5px;
+    }
+}
+@keyframes ear-movement {
+    0% {
+        height: 115px;
+    }
+    50% {
+        height: 110px;
+    }
+    100% {
+        height: 115px;
+    }
+}
+@keyframes eyebrows-movement {
+    0% {
+        height: 18px;
+    }
+    50% {
+        height: 20px;
+    }
+    100% {
+        height: 18px;
+    }
+}

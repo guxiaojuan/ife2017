@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex实现水平垂直居中</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content: center;
+            /*align-items: center;*/
+        }
+        .content{
+            background-color: #ccc;
+            width:600px;
+            height:400px;
+            position: absolute;
+            top:50%;
+            margin-top:-200px;
+            text-align: center;
+            line-height:400px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="content">
+    <span class="main">行内元素居中</span>
+</div>
+</div>
+</body>
+</html>
