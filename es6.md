@@ -15,6 +15,6 @@
 ###  将字符串转变为数组
     [...'hello']
     
-## Array.from 是将类似数组的对象和可遍历的对象转化为数组，如DOM对象的nodeList集合和arguments对象.第二个参数可以代替map函数 ##
+### Array.from 是将类似数组的对象和可遍历的对象转化为数组，如DOM对象的nodeList集合和arguments对象.第二个参数可以代替map函数 
 -------------------------------------
-## Array.of  是将一组值转化为数组，代替Array() 和 new Array() ##
+### Array.of  是将一组值转化为数组，代替Array() 和 new Array() 
