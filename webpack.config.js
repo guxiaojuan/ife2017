@@ -42,8 +42,8 @@ module.exports={
                 // }
             },
             {
-                test: /\.s?css$/,
-                include: path.resolve(__dirname, "src/styles"),
+                test: /\.scss$/,
+                include: path.resolve(__dirname, "src/public"),
                 loader: "style!css!sass?sourceMap"
             },
         ]

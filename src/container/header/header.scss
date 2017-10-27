@@ -1,0 +1,10 @@
+@import "../../public/style/base.scss";
+
+.header{
+  position: fixed;
+  height: 2.5rem;
+  background: #EE7419;
+  .title{
+    color:white;
+  }
+}

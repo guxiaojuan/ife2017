@@ -1,0 +1,25 @@
+/*
+ * flex布局
+ */
+
+/*水平垂直居中*/
+.box-center{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*水平居中*/
+.box-horizontal-center{
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-orient: horizontal;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
