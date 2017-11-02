@@ -36,26 +36,20 @@ module.exports={
             {
                 test:/\.jsx?$/,
                 loader:['babel-loader'],
-                exclude:/node-modules/,
-                // query:{
-                //     presets:["es2015"]
-                // }
+                exclude:/node-modules/
             },
             {
                 test: /\.scss$/,
-                include: path.resolve(__dirname, "src/public"),
-                loader: "style!css!sass?sourceMap"
+                include: path.resolve(__dirname, "src/public/style"),
+                // loader: "style!css!sass?sourceMap"
+                loader:[
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
             },
         ]
     },
-    // resolve: {
-    //     extensions: ["", ".js", ".jsx"]      //自动解析确定的扩展
-    // },
-    // postcss:[
-    //     rucksack({
-    //         autoprefixer:true
-    //     })
-    // ],
     plugins:[
         new webpack.optimize.UglifyJsPlugin({      //解决webpack打包文件体积过大的问题，webpack自带的压缩功能
             compress:{
