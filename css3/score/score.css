@@ -1,0 +1,660 @@
+.hide {
+    display: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.wrap {
+    width: 100%;
+    height: 4.373rem;
+    background: url(img/bg-animate.jpg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 7;
+}
+.ani-enter-active, .ani-leave-active {
+    transition: transform .4s ease;
+    will-change: transform;
+}
+
+.ani-enter-active, .ani-leave {
+    transform: scale(1);
+}
+
+.ani-leave-active, .ani-enter {
+    transform: scale(0);
+}
+
+.zhu {
+    position: absolute;
+    left: 1.133rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.04rem;
+    height: 1.08rem;
+    background-color: #a71010;
+}
+.ke {
+    position: absolute;
+    right: 1.133rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.04rem;
+    height: 1.08rem;
+    background-color: #003261;
+}
+.close {
+    position: absolute;
+    top: 0.427rem;
+    left: 0.187rem;
+    width: 0.507rem;
+    height: 0.32rem;
+    background: url(img/close.png) no-repeat;
+    background-size:contain;
+    z-index: 2;
+}
+.time {
+    position: absolute;
+    top: 0.427rem;
+    right: 0.187rem;
+    color: #72c081;
+    font-size: 0.267rem;
+    z-index: 2;
+}
+.score {
+    position: relative;
+    width: 2.933rem;
+    height: 0.373rem;
+    margin: 0.427rem auto 0;
+    background-color: #002608;
+    color: #72c081;
+    font-size: 0.267rem;
+    z-index: 10;
+}
+.score .home-name {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    margin-right: 0.08rem;
+    height: 0.373rem;
+    line-height: 0.373rem;
+}
+.score .away-name {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 0.08rem;
+    height: 0.373rem;
+    line-height: 0.373rem;
+}
+.score .colon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -0.04rem;
+    height: 0.373rem;
+    line-height: 0.373rem;
+}
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 0.987rem;
+    height: 0.987rem;
+    line-height: 0.987rem;
+    border-radius: 100rem;
+    background-color: #043d0f;
+    color: #fff;
+    font-size: 0.293rem;
+    text-align: center;
+    overflow: hidden;
+}
+.notstart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 0.293rem;
+    line-height: 0.4rem;
+}
+.ball-control {
+    position: absolute;
+    top: 0.427rem;
+    width: 3.813rem;
+    height: 3.52rem;
+    background-color: rgba(0,38,8,0.5);
+    z-index: 1;
+}
+.ball-control.home {
+    left: 1.173rem;
+}
+.ball-control.away {
+    right: 1.173rem;
+}
+.offense {
+    position: absolute;
+    top: 0.427rem;
+    width: 5.55rem;
+    height: 3.52rem;
+    background: url(img/bg-offense.png) no-repeat;
+    z-index: 1;
+}
+.offense.home {
+    left: 1.173rem;
+}
+.offense.away {
+    right: 1.173rem;
+    transform: scaleX(-1);
+}
+.d-offense {
+    position: absolute;
+    top: 0.427rem;
+    width: 6.093rem;
+    height: 3.52rem;
+    background: url(img/bg-d-offense.png) no-repeat right center;
+    z-index: 1;
+}
+.d-offense.home {
+    left: 1.173rem;
+    animation: d-offense  1.5s infinite linear forwards;
+}
+.d-offense.away {
+    right: 1.173rem;
+    transform: scaleX(-1);
+    animation: d-offense  1.5s infinite linear forwards;
+}
+.goal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.253rem;
+    height: 2.147rem;
+    background: url(img/goal.png) no-repeat;
+    background-size:contain;
+    z-index: 1;
+}
+.goal.home {
+    right: 1.16rem;
+}
+.goal.away {
+    left: 1.16rem;
+    transform: scaleX(-1) translateY(-50%);
+}
+.goal-bifen {
+    width: 2.827rem;
+    height: 1.547rem;
+    line-height: 1.547rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 0.96rem;
+    color: #fff;
+}
+.goal-bifen .goal-bg {
+    position: relative;
+    width: 1.107rem;
+    height: 1.547rem;
+    background: url(img/bg-goal-bifen.png) no-repeat;
+    text-align: center;
+    overflow: hidden;
+}
+.goal-bifen .home {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.067rem;
+    background-color: #a71010;
+}
+.goal-bifen .away {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.067rem;
+    background-color: #003261;
+}
+.goal-bifen .scroll {
+    position: relative;
+    width: 1.107rem;
+    height: 3.094rem;
+}
+.goal-bifen .scroll.ani-goal {
+    animation: goal  0.8s linear forwards;
+}
+.goal-bifen .mh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.y-card {
+    display: inline-block;
+    width: 0.987rem;
+    height: 0.987rem;
+    background: url(img/y-card.png) no-repeat;
+    background-size:contain;
+    transform: translateX(0) translateY(100%);
+    animation: card  2s linear forwards;
+}
+.r-card {
+    display: inline-block;
+    width: 0.987rem;
+    height: 0.987rem;
+    background: url(img/r-card.png) no-repeat;
+    background-size:contain;
+    transform: translateX(0) translateY(100%);
+    animation: card  2s linear forwards;
+}
+.blcok {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.253rem;
+    height: 1.253rem;
+    border-radius: 100rem;
+    background-color: #043d0f;
+    overflow: hidden;
+}
+.blcok.home {
+    transform: scaleX(-1) translateY(-50%);
+    right: 1.8rem;
+}
+.blcok.away {
+    left: 1.8rem;
+}
+.blcok .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.253rem;
+    height: 1.253rem;
+    background: url(img/block01.png) no-repeat;
+    z-index: 3;
+}
+.blcok .hand {
+    position: absolute;
+    top: 1.253rem;
+    left: 0;
+    width: 1.253rem;
+    height: 1.253rem;
+    background: url(img/block02.png) no-repeat;
+    background-size:contain;
+    z-index: 2;
+    animation: hand  0.8s linear forwards;
+}
+.blcok .big-ball {
+    position: absolute;
+    top: 0;
+    left: 1.253rem;
+    width: 1.253rem;
+    height: 1.253rem;
+    background: url(img/block03.png) no-repeat;
+    background-size:contain;
+    z-index: 1;
+    animation: big-ball  0.8s linear forwards;
+}
+.doorframe {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.627rem;
+    height: 1.173rem;
+}
+.doorframe.home {
+    right: 1.333rem;
+}
+.doorframe.away {
+    left: 1.333rem;
+    transform: scaleX(-1) translateY(-50%);
+}
+.doorframe .door {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.627rem;
+    height: 1.173rem;
+    background: url(img/door.png) no-repeat;
+    background-size:contain;
+    z-index: 1;
+}
+.doorframe .ball {
+    position: absolute;
+    top: -0.133rem;
+    left:  0.133rem;
+    transform: translate(-120%,0);
+    width: 0.56rem;
+    height: 0.56rem;
+    background: url(img/ball.png) no-repeat;
+    background-size:contain;
+    z-index: 2;
+    animation: doorframe  0.4s ease-out forwards;
+}
+.freekick {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.573rem;
+    height: 2.16rem;
+}
+.freekick.home {
+    left: 64%;
+}
+.freekick.away {
+    right: 64%;
+    transform: scaleX(-1) translateY(-50%);
+}
+.freekick .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.573rem;
+    height: 2.16rem;
+    background: url(img/area.png) no-repeat right center;
+    z-index: 1;
+    animation: area 1.5s infinite linear;
+    transform: scaleX(-1);
+}
+.freekick .ball {
+    position: absolute;
+    top: 50%;
+    left: -0.2rem;
+    transform: translateY(-50%);
+    width: 0.56rem;
+    height: 0.56rem;
+    background: url(img/ball.png) no-repeat;
+    background-size:contain;
+    z-index: 2;
+}
+.offside {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.133rem;
+    height: 3.6rem;
+}
+.offside.away {
+    right: 76%;
+}
+.offside.home {
+    left: 76%;
+    transform: scaleX(-1) translateY(-50%);
+}
+.offside .bg {
+    position: relative;
+    width: 0.133rem;
+    height: 3.6rem;
+    background-color: #ffd800;
+}
+.offside .ball {
+    position: absolute;
+    top: 50%;
+    left: -0.8rem;
+    transform: translateY(-50%);
+    width: 0.56rem;
+    height: 0.56rem;
+    background: url(img/ball.png) no-repeat;
+    background-size:contain;
+    z-index: 2;
+}
+.change {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.change .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 0.9rem;
+    height: 1.093rem;
+}
+.change .middle .up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.453rem;
+    height: 0.64rem;
+    background: url(img/change.png) no-repeat top left;
+    animation: up  1.2s infinite linear forwards;
+}
+.change .middle .down {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0.453rem;
+    height: 0.64rem;
+    background: url(img/change.png) no-repeat bottom left;
+    animation: down  1.2s infinite linear forwards;
+}
+.change .down-text {
+    position: absolute;
+    top: 46%;
+    left: 56%;
+    font-size:0.293rem;
+    height: 0.8rem;
+    line-height: 0.4rem;
+    color: #fff;
+    text-align: left;
+    background-color: #024809;
+    border-radius: 0.133rem;
+    padding: 0.133rem;
+    z-index: 2;
+}
+.change .up-text {
+    position: absolute;
+    bottom: 46%;
+    right: 56%;
+    font-size:0.293rem;
+    height: 0.8rem;
+    line-height: 0.4rem;
+    color: #fff;
+    text-align: right;
+    background-color: #024809;
+    border-radius: 0.133rem;
+    padding: 0.133rem;
+    z-index: 2;
+}
+.change .down-text .color {
+    position: absolute;
+    top: 0.133rem;
+    bottom: 0.133rem;
+    left: 0.133rem;
+    width: 0.08rem;
+}
+.change .down-text .name {
+    margin-left: 0.3rem;
+}
+.change .down-text .team {
+    margin-left: 0.3rem;
+    color: #72c081;
+}
+.change .up-text .color {
+    position: absolute;
+    top: 0.133rem;
+    bottom: 0.133rem;
+    right: 0.133rem;
+    width: 0.08rem;
+}
+.change .up-text .name {
+    margin-right: 0.3rem;
+}
+.change .up-text .team {
+    margin-right: 0.3rem;
+    color: #72c081;
+}
+.change.away .color {
+    background-color: #003261;
+}
+.change.home .color {
+    background-color: #a71010;
+}
+
+/*文本*/
+.home-text {
+    position: absolute;
+    font-size:0.293rem;
+    height: 0.8rem;
+    line-height: 0.4rem;
+    color: #fff;
+    text-align: right;
+    z-index: 2;
+}
+.home-text > span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0.08rem;
+    background-color: #a71010;
+}
+.home-text > .name {
+    margin-right: 0.3rem;
+}
+.home-text > .team {
+    margin-right: 0.3rem;
+    color: #72c081;
+}
+.away-text {
+    position: absolute;
+    font-size:0.293rem;
+    height: 0.8rem;
+    line-height: 0.4rem;
+    color: #fff;
+    text-align: left;
+    z-index: 2;
+}
+.away-text > span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0.08rem;
+    background-color: #003261;
+}
+.away-text > .name {
+    margin-left: 0.3rem;
+}
+.away-text > .team {
+    margin-left: 0.3rem;
+    color: #72c081;
+}
+/*主队文本位置样式*/
+/*主队控球、红黄牌*/
+.home-text-control {
+    top: 50%;
+    right: 58%;
+    transform: translateY(-50%);
+}
+/*主队进攻、任意球*/
+.home-text-offense {
+    top: 50%;
+    right: 40%;
+    transform: translateY(-50%);
+}
+/*主队危险进攻、射门被扑、击中门框*/
+.home-text-d-offense {
+    top: 50%;
+    right: 34%;
+    transform: translateY(-50%);
+}
+/*主队进球、越位*/
+.home-text-goal {
+    top: 50%;
+    right: 28%;
+    transform: translateY(-50%);
+}
+
+/*客队文本位置样式*/
+/*客队控球、红黄牌*/
+.away-text-control {
+    top: 50%;
+    left: 58%;
+    transform: translateY(-50%);
+}
+/*客队进攻、任意球*/
+.away-text-offense {
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%);
+}
+/*客队危险进攻、射门被扑、击中门框*/
+.away-text-d-offense {
+    top: 50%;
+    left: 34%;
+    transform: translateY(-50%);
+}
+/*客队进球、越位*/
+.away-text-goal {
+    top: 50%;
+    left: 28%;
+    transform: translateY(-50%);
+}
+
+/*定义动画*/
+/*危险进攻*/
+@keyframes d-offense {
+    0%{width: 6.093rem;}
+    20%{width: 6.667rem;}
+    50%{width: 6.4rem;}
+    75%{width: 6.2rem;}
+    100%{width: 6.093rem;}
+}
+/*进球得分*/
+@keyframes goal {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(0,-50%);}
+}
+/*红黄牌*/
+@keyframes card {
+    0%{transform: translateX(0) translateY(100%);}
+    25%{transform: translateX(0) translateY(0);}
+    50%{transform-origin: 50% 100%;transform: translateX(0) translateY(0) rotate(10deg);}
+    75%{transform-origin: 50% 100%;transform: translateX(0) translateY(0) rotate(-10deg);}
+    100%{transform-origin: 50% 100%;transform: translateX(0) translateY(0) rotate(0deg);}
+}
+/*射门被扑*/
+@keyframes hand {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(0,-100%);}
+}
+@keyframes big-ball {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(-100%,0);}
+}
+/*击中门框*/
+@keyframes doorframe {
+    0%{transform: translate(-120%,0);}
+    100%{transform: translate(0,0);}
+}
+/*范围扩展*/
+@keyframes area {
+    0%{opacity:0; width: 0rem;}
+    20%{opacity:1; width: 1.573rem;}
+    40%{opacity:1; width: 1.573rem;}
+    85%{opacity:0; width: 1.573rem;}
+    100%{opacity:0; width:0rem;}
+}
+/*换人*/
+@keyframes up {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(0,-30%);}
+}
+@keyframes down {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(0,30%);}
+}

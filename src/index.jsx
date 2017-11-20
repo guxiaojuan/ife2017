@@ -1,16 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Router, Route} from 'react-router'
+import Main from './container/main/main.jsx'
 import Home from './container/home/home.jsx'
 
 class Text extends React.Component {
     render() {
         return (
-            <Router>
-                <Route path='/' component={Home}>
-                    <Route path='home' component={Home}/>
-                </Route>
-            </Router>
+            <div>
+                <h1>问卷调查</h1>
+                <Main></Main>
+                <h1>--------------</h1>
+                <Home/>
+            </div>
+
         )
     }
 }

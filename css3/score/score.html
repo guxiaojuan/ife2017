@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>比分动画直播</title>
+    <link rel="stylesheet" href="score.css" type="text/css">
+</head>
+<body>
+<section class="wrap">
+    <span class="close"></span>
+    <span class="time">20:30</span>
+    <span class="zhu"></span>
+    <span class="ke"></span>
+
+    <!--比分start-->
+    <div class="score">
+        <div class="home-name">阿森纳&nbsp;&nbsp;2</div>
+        <span class="colon">:</span>
+        <div class="away-name">3&nbsp;&nbsp;切尔西</div>
+    </div>
+    <!--比分end-->
+
+    <!--半场、完赛start-->
+    <div class="circle hide">半场</div>
+    <!--半场、完赛end-->
+
+    <!--未开始start-->
+    <div class="notstart hide">比赛时间<br/>2017-10-12 04:56</div>
+    <!--未开始end-->
+
+    <!--主队文本start-->
+    <div class="home-text home-text-offense hide">
+        <span></span>
+        <div class="name">Stalions FC</div>
+        <div class="team">主队进球</div>
+    </div>
+    <!--主队文本end-->
+
+    <!--客队文本start-->
+    <div class="away-text away-text-goal hide">
+        <span></span>
+        <div class="name">Stalions FC</div>
+        <div class="team">客队进球</div>
+    </div>
+    <!--客队文本end-->
+
+    <!--控球start-->
+    <div class="ball-control home hide"></div>
+    <div class="ball-control away hide"></div>
+    <!--控球end-->
+
+    <!--进攻start-->
+    <div class="offense home hide"></div>
+    <div class="offense away hide"></div>
+    <!--进攻end-->
+
+    <!--危险进攻start-->
+    <div class="d-offense home hide"></div>
+    <div class="d-offense away hide"></div>
+    <!--危险进攻end-->
+
+    <!--进球start-->
+    <div class="goal home hide"></div>
+    <div class="goal away hide"></div>
+    <!--进球end-->
+
+    <!--进球比分start-->
+    <div class="goal-bifen hide">
+        <div class="goal-bg fl">
+            <div class="scroll ani-goal">
+                <div class="old">2</div>
+                <div class="new">3</div>
+            </div>
+            <span class="home"></span>
+        </div>
+        <span class="mh">:</span>
+        <div class="goal-bg fr">
+            <div class="scroll">
+                <div class="old">2</div>
+                <div class="new">3</div>
+            </div>
+            <span class="away"></span>
+        </div>
+    </div>
+    <!--进球比分end-->
+
+    <!--红黄牌start-->
+    <div class="circle hide"><span class="y-card"></span></div>
+    <div class="circle hide"><span class="r-card"></span></div>
+    <!--红黄牌end-->
+
+    <!--射门被扑start-->
+    <div class="blcok home hide">
+        <div class="big-ball"></div>
+        <div class="hand"></div>
+        <div class="bg"></div>
+    </div>
+    <div class="blcok away hide">
+        <div class="big-ball"></div>
+        <div class="hand"></div>
+        <div class="bg"></div>
+    </div>
+    <!--射门被扑end-->
+
+    <!--击中门框start-->
+    <div class="doorframe home hide">
+        <span class="ball"></span>
+        <div class="door"></div>
+    </div>
+    <div class="doorframe away hide">
+        <span class="ball"></span>
+        <div class="door"></div>
+    </div>
+    <!--击中门框end-->
+
+    <!--任意球start-->
+    <div class="freekick away hide">
+        <span class="ball"></span>
+        <div class="bg"></div>
+    </div>
+    <div class="freekick home hide">
+        <span class="ball"></span>
+        <div class="bg"></div>
+    </div>
+    <!--任意球end-->
+
+    <!--越位start-->
+    <div class="offside home hide">
+        <span class="ball"></span>
+        <div class="bg"></div>
+    </div>
+    <div class="offside away hide">
+        <span class="ball"></span>
+        <div class="bg"></div>
+    </div>
+    <!--越位end-->
+
+    <!--换人start-->
+    <div class="change away hide">
+        <div class="middle">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="down-text">
+            <span class="color"></span>
+            <div class="name">Stalions FC</div>
+            <div class="team">下场</div>
+        </div>
+        <div class="up-text">
+            <span class="color"></span>
+            <div class="name">Stalions FC</div>
+            <div class="team">上场</div>
+        </div>
+    </div>
+    <div class="change home hide">
+        <div class="middle">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="down-text">
+            <span class="color"></span>
+            <div class="name">Stalions FC</div>
+            <div class="team">下场</div>
+        </div>
+        <div class="up-text">
+            <span class="color"></span>
+            <div class="name">Stalions FC</div>
+            <div class="team">上场</div>
+        </div>
+    </div>
+    <!--换人end-->
+
+</section>
+</body>
+</html>

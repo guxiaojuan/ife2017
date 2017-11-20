@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "devbuild": "webpack --progress --colors --watch",
-    "dev": "webpack-dev-server --hot --inline --progress --colors --watch --port 3000"
+    "dev": "webpack-dev-server --hot --inline --colors --watch --port 3000 "
   },
   "repository": {
     "type": "git",
