@@ -9,18 +9,16 @@ export default class Home extends React.Component{
         this.handleClick = this.handleClick.bind(this)
     }
     handleClick() {
-        this.setState(preState =>{
-            isToggleOn:!preState.isToggleOn
+        this.setState({
+            isToggleOn:!this.state.isToggleOn
         })
-    }
-    componentDidMount(){
-        console.log(this.isToggleOn)
+        console.log("this.state is:" +this.state.isToggleOn)
     }
 
     render(){
         return(
             <button onClick={this.handleClick}>
-                {this.isToggleOn? 'ON':'OFF'}
+                {this.state.isToggleOn? 'ON':'OFF'}
             </button>
         )
     }

@@ -63,8 +63,8 @@ module.exports={
 
         new ExtectTextPlugin("style.css"),  //提取出来的样式文件放到style.css文件里
 
-        new webpack.DefinePlugin({  //创建一个在编译时可以配置的全局常量
-            'process.env':{NODE_ENV:JSON.stringify(process.env.NODE_ENV || 'development')}
+        new webpack.DefinePlugin({
+            'process.env':{NODE_ENV:JSON.stringify(process.env.NODE_ENV)}
         }),
         new webpack.LoaderOptionsPlugin({
             options:{
@@ -77,7 +77,9 @@ module.exports={
         }),
         new HtmlWebpackPlugin({
             template:'./index.html'
-        })
+        }),
+        // new webpack.EnvironmentPlugin(['NODE_ENV'])
+
     ],
     devServer:{
         contentBase: path.resolve(__dirname, "src"),   //修改请求路径
