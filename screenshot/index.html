@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 354px;
+        }
+
+        .card img.cover {
+            width: 100%;
+        }
+
+        .card .user-name {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <div class="card">
+        <img class="cover" src="https://ok.166.net/audiozhurong/nielian/2018/07/04/0F231F5194F0F2F1530673285.png" alt="">
+        <div class="user-name">js截屏测试测试</div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js">
+</script>
+<script>
+	html2canvas(document.querySelector('.card'), {
+		allowTaint: true // 允许加载跨域资源
+	}).then(function(canvas) {
+		document.body.appendChild(canvas);
+	});
+</script>
+</body>
+</html>

@@ -5,3 +5,4 @@ dist
 vim.exe.stackdump
 yarn.lock
 yarn-error.log
+package-lock.json
