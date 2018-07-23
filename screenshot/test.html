@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
 
     <style>
-        .hide {
-            display: none;
-        }
         .share-card {
             width: 10rem;
             height: 14.32rem;
@@ -15,35 +12,42 @@
         .share-img {
             width: 100%;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
-<div class="share-card hide" id="showpicdiv">
+<div class="share-card" id="showpicdiv">
+    <p>html2canvas截屏</p>
     <img class="share-img" src="Hydrangeas.jpg"/>
 </div>
+<hr>
 </body>
 
 <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 <script>
-    var canvas = document.createElement('canvas');
+    var _canvas = document.createElement('canvas');
     var canvasDiv = document.querySelector('#showpicdiv');
     var w = parseInt(window.getComputedStyle(canvasDiv).width);
     var h = parseInt(window.getComputedStyle(canvasDiv).height);
-    canvas.width = w + 'px';
-    canvas.height = h + 'px';
-    var context = canvas.getContext("2d");
+	_canvas.width = w*2;
+	_canvas.height = h*2;
+	_canvas.style.width = w + 'px';
+	_canvas.style.height = h + 'px';
+    var context = _canvas.getContext("2d");
     context.scale(2,2);
-    var img = document.querySelector('.share-img');
 
     html2canvas(canvasDiv, {
-    	canvas: canvas,
+        // canvas: _canvas,
         userCORS: true,
         scale: 1.5,
         backgroundColor: '#000'
-    }).then(function(res) {
-    	var src = res.toDataURL();
-    	img.src = src;
+    }).then(function(canvas) {
+    	console.log("================");
+    	console.log(canvas);
+		document.body.appendChild(canvas);
     })
 </script>
 </html>
